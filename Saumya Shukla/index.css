@@ -1,8 +1,20 @@
-
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+}
+.video_back {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
 .box {
   position: static;
   width: 200px;
-  height: 200px;
+  height: 150px;
   transform-style: preserve-3d;
   animation: animate 40s linear infinite;
 }
@@ -10,9 +22,11 @@
   0% {
     transform: perspective(1000px) rotateY(0deg);
   }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
 }
 .box span {
-  
   backdrop-filter: blur(5px);
   border: 1px;
   position: absolute;
