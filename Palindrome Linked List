@@ -1,0 +1,22 @@
+Palindrome Linked List in Java (LeetCode Problem)
+
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+        ArrayList<Integer> l = new ArrayList<>();
+        ListNode cur = head;
+        
+        while(cur!=null){
+            l.add(cur.val);
+            cur = cur.next;
+        }
+        
+        for(int i = 0; i < l.size()/2 ;i++){
+            if(l.get(i) != l.get(l.size() -1-i)){
+                return false;
+            }
+        }
+        
+        return true;
+
+    }
+}
